@@ -16,3 +16,5 @@ Deep learning, in particular, semantic segmentation, has found its niche in medi
 You can find the DRIVE dataset with training/validation split [here on Kaggle](https://www.kaggle.com/datasets/sovitrath/drive-trainvalidation-split-dataset). We will use this version of the dataset for training and evaluating the model.
 
 After downloading and extracting the dataset, you will find the following structure:
+![image](https://github.com/Manshi3/retinal_vessel_sementic_segmentation/assets/105007863/9bb7e57f-1fe8-42aa-9aa7-11429e171a31)
+

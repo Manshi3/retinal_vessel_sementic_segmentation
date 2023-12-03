@@ -18,3 +18,10 @@ You can find the DRIVE dataset with training/validation split [here on Kaggle](h
 After downloading and extracting the dataset, you will find the following structure:
 ![image](https://github.com/Manshi3/retinal_vessel_sementic_segmentation/assets/105007863/9bb7e57f-1fe8-42aa-9aa7-11429e171a31)
 
+<h1>Directory Structure for Retinal Vessel Segmentation Project</h1>
+
+![image](https://github.com/Manshi3/retinal_vessel_sementic_segmentation/assets/105007863/7d7a7f5f-3b3b-4377-b576-b24d3406164c)
+
+<h4>All training and inference experiments were carried out on a machine with 10 GB RTX 3080 GPU, 10th generation i7 CPU, and 32 GB of RAM.
+else use GOOGLE COLABORATORY PLUS for the working of the model</h4>
+

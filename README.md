@@ -11,4 +11,8 @@ Deep learning, in particular, semantic segmentation, has found its niche in medi
       -DeepLabV3 ResNet101 training with 768×768 images.
 -> After analyzing all the results, we will use the best model for running inference on a held-out test set.
 
-#The DRIVE Dataset for Retinal Vessel Segmentation
+<h1> The DRIVE Dataset for Retinal Vessel Segmentation </h6>
+
+You can find the DRIVE dataset with training/validation split [here on Kaggle](https://www.kaggle.com/datasets/sovitrath/drive-trainvalidation-split-dataset). We will use this version of the dataset for training and evaluating the model.
+
+After downloading and extracting the dataset, you will find the following structure:

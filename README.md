@@ -25,3 +25,44 @@ After downloading and extracting the dataset, you will find the following struct
 <h4>All training and inference experiments were carried out on a machine with 10 GB RTX 3080 GPU, 10th generation i7 CPU, and 32 GB of RAM.
 else use GOOGLE COLABORATORY PLUS for the working of the model</h4>
 
+<h2>Training DeepLabV3 ResNet50 with 512×512 Resolution</h2>
+We will start with training the DeepLabV3 ResNet50 with 512×512 resolution. This is the base resolution for this dataset and we will not go below this. It’s very difficult to get good results for this dataset with lower resolution images.
+
+                  python train.py --epochs 100 --lr 0.0001 --batch 2 --imgsz 512
+
+<h2>Training DeepLabV3 ResNet50 with 768×768 Resolution</h2>
+Let’s move on to the next experiment. This time we will train the same DeepLabV3 ResNet50 model but with 768×768 resolution.
+
+Note: This training experiment requires quite a lot of VRAM, ~ 8 GB.
+
+To start the training experiment, we can execute the following command.
+
+                  python train.py --epochs 100 --lr 0.0001 --batch 2 --imgsz 768
+
+<h2>Training DeepLabV3 ResNet101 with 512×512 Resolution</h2>
+Now, we will use the DeepLabV3 ResNet101 for training on the Retinal Vessel Segmentation dataset.
+
+If you are also training your own models while following the article, please uncomment the function in model.py which loads the deeplabv3_resnet101 model and comment out the previous function.
+
+The training command is going to be the same as the first experiment as the only change we needed was in the model.py file.
+
+                  python train.py --epochs 100 --lr 0.0001 --batch 2 --imgsz 512
+
+<h2>Training DeepLabV3 ResNet101 with 640×640 Resolution</h2>
+We are down to the final training experiment. We will train the DeepLabV3 ResNet101 model with 640×640 resolution.
+
+But why 640×640 and not 768×768? It’s only because of memory constraints. I could only fit 640×640 resolution images into 10 GB RTX 3080. In case you are a GPU-savvy person, it consumed exactly 9.8 GB out of the 10 GB with 2 Chrome tabs open. On a side (and fun) note, I could not carry out the training when 10 Chrome tabs were open. There was not enough VRAM available in that case.
+
+This is the command to start the training.
+
+                  python train.py --epochs 100 --lr 0.0001 --batch 2 --imgsz 640
+
+<h2>Inference using the Best Model</h2>
+
+We will run the inference on the test images that come with the dataset. We will use the inference_image.py script for this.
+
+                  python inference_image.py --model ../outputs/best_model_iou.pth --input ../input/DRIVE_train_val_split/test_images/ --imgsz 768
+
+
+
+
